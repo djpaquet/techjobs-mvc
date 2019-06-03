@@ -27,5 +27,20 @@
         </div>
     </div>
 
+    <div th:fragment="list-form">
+
+        <table class="job-listing"  th:each="job : ${jobs}">
+            <tbody>
+
+            <tr th:each="jobEntry : ${job}">
+                <td th:text="${jobEntry.key}" >key</td>
+                <td th:text="${jobEntry.value}">value</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
 </body>
 </html>
